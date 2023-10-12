@@ -27,8 +27,20 @@ class CalculadoraTest {
 	}
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testSuma() {
+		assertEquals(5, Calculadora.suma(2,3));
+	}
+	@Test
+	void testResta() {
+		assertEquals(5, Calculadora.resta(2,3));
+	}
+	@Test
+	void testMultiplicar() {
+		assertEquals(5, Calculadora.multiplicar(2,3));
+	}
+	@Test
+	void testDividir() {
+		assertEquals(5, Calculadora.dividir(2,3));
 	}
 
 }
