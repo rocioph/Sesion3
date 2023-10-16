@@ -3,6 +3,7 @@ package pkg;
 public class Cuenta {
 
 	private double saldo;
+	private static final double saldomin=-500;
 	
 	public Cuenta(double saldo) {
 		super();
@@ -18,8 +19,15 @@ public class Cuenta {
 		// TODO Auto-generated method stub
 		this.setSaldo(this.getSaldo()+i);
 	}
-	public void Retirar(int i)
+	public double Retirar(int i) throws Exception
 	{
-		this.setSaldo(this.getSaldo()-i);
+		if(this.getSaldo()<saldomin)
+		{
+			return -3000;
+		}
+		else {
+			this.setSaldo(this.getSaldo()-i);
+			return this.getSaldo();
+		}
 	}
 }
