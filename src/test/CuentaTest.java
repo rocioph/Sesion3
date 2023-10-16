@@ -37,7 +37,7 @@ class CuentaTest {
 	@Test
 	void testRetirar() {
 		assertFalse(cta.Retirar(3000));
-		assertEquals(-3000,cta.getSaldo());
+		assertEquals(0,cta.getSaldo());
 	}
 	
 	 @Test
@@ -57,8 +57,8 @@ class CuentaTest {
 		 	assertTrue(c67890.Retirar(350));
 			assertEquals(-350,c67890.getSaldo());
 			
-			/*assertTrue(c67890.Retirar(350));
-			assertEquals(-350,c67890.getSaldo());*/
+			assertFalse(c67890.Retirar(200));
+			assertEquals(-350,c67890.getSaldo());
 	    }
 
 }

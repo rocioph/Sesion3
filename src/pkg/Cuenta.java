@@ -23,12 +23,14 @@ public class Cuenta {
 	}
 	public boolean Retirar(int i) 
 	{
-		this.setSaldo(this.getSaldo()-i);
-		if(this.getSaldo()<saldomin)
+		double nuevosaldo=0;
+		nuevosaldo=this.getSaldo()-i;
+		if(nuevosaldo<saldomin)
 		{
 			return false;
 		}
 		else {
+			this.setSaldo(getSaldo()-i);
 			return true;
 		}
 	}
