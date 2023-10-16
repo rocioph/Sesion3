@@ -39,5 +39,12 @@ class CuentaTest {
 		assertFalse(cta.Retirar(3000));
 		assertEquals(-3000,cta.getSaldo());
 	}
+	
+	 @Test
+	    public void testT0014() 
+	    {
+		 	Cuenta c12345 = new Cuenta(50,12345);
+		 	Cuenta c12345 = new Cuenta(0,67890);
+	    }
 
 }
