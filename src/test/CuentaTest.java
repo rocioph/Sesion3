@@ -59,6 +59,10 @@ class CuentaTest {
 			
 			assertFalse(c67890.Retirar(200));
 			assertEquals(-350,c67890.getSaldo());
+			
+			assertTrue(c67890.Retirar(150));
+			assertEquals(-500,c67890.getSaldo());
+			
 	    }
 
 }
