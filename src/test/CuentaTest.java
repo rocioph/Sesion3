@@ -68,6 +68,8 @@ class CuentaTest {
 			c67890.ingresar(50);
 			assertEquals(-450,c67890.getSaldo());
 			
+			assertFalse(c67890.Retirar(100));
+			assertEquals(-450,c67890.getSaldo());
 	    }
 
 }
