@@ -49,13 +49,16 @@ class CuentaTest {
 		 	assertTrue(c12345.Retirar(200));
 		 	assertEquals(-150,c12345.getSaldo());
 		 	
-			assertTrue(c12345.Retirar(100));
-			assertEquals(-250,c12345.getSaldo());
+			c12345.ingresar(100);
+			assertEquals(-50,c12345.getSaldo());
 			
 			
 		 	//instruccion cuenta67890
 		 	assertTrue(c67890.Retirar(350));
 			assertEquals(-350,c67890.getSaldo());
+			
+			/*assertTrue(c67890.Retirar(350));
+			assertEquals(-350,c67890.getSaldo());*/
 	    }
 
 }
