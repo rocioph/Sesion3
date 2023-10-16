@@ -45,8 +45,15 @@ class CuentaTest {
 	    {
 		 	Cuenta c12345 = new Cuenta(50,12345);
 		 	Cuenta c67890 = new Cuenta(0,67890);
+		 	//instcuccion cuenta 12345
 		 	assertTrue(c12345.Retirar(200));
-			assertEquals(-150,c12345.getSaldo());
+		 	assertEquals(-150,c12345.getSaldo());
+		 	
+			assertTrue(c12345.Retirar(100));
+			assertEquals(-250,c12345.getSaldo());
+			
+			
+		 	//instruccion cuenta67890
 		 	assertTrue(c67890.Retirar(350));
 			assertEquals(-350,c67890.getSaldo());
 	    }
