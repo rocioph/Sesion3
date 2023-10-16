@@ -9,7 +9,7 @@ public class Cuenta {
 	public Cuenta(double saldo, int numero) {
 		super();
 		this.saldo = saldo;
-		this.numero=12345;
+		this.numero=numero;
 	}
 	public double getSaldo() {
 		return saldo;

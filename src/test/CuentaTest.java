@@ -14,7 +14,7 @@ class CuentaTest {
 	static Cuenta cta;
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		cta = new Cuenta(0,12345);
+		cta = new Cuenta(0,1369);
 	}
 
 	@AfterAll
@@ -44,7 +44,7 @@ class CuentaTest {
 	    public void testT0014() 
 	    {
 		 	Cuenta c12345 = new Cuenta(50,12345);
-		 	//Cuenta c67890 = new Cuenta(0,67890);
+		 	Cuenta c67890 = new Cuenta(0,67890);
 	    }
 
 }
