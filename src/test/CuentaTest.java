@@ -35,8 +35,8 @@ class CuentaTest {
 		assertEquals(3000,cta.getSaldo());
 	}
 	@Test
-	void testRetirar() throws Exception {
-		cta.Retirar(3000);
+	void testRetirar() {
+		assertFalse(cta.Retirar(3000));
 		assertEquals(-3000,cta.getSaldo());
 	}
 

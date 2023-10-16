@@ -19,15 +19,15 @@ public class Cuenta {
 		// TODO Auto-generated method stub
 		this.setSaldo(this.getSaldo()+i);
 	}
-	public double Retirar(int i) throws Exception
+	public boolean Retirar(int i) 
 	{
+		this.setSaldo(this.getSaldo()-i);
 		if(this.getSaldo()<saldomin)
 		{
-			return -3000;
+			return false;
 		}
 		else {
-			this.setSaldo(this.getSaldo()-i);
-			return this.getSaldo();
+			return true;
 		}
 	}
 }
