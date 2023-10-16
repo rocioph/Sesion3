@@ -47,6 +47,8 @@ class CuentaTest {
 		 	Cuenta c67890 = new Cuenta(0,67890);
 		 	assertTrue(c12345.Retirar(200));
 			assertEquals(-150,c12345.getSaldo());
+		 	assertTrue(c67890.Retirar(350));
+			assertEquals(-350,c67890.getSaldo());
 	    }
 
 }
