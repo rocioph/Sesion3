@@ -38,6 +38,8 @@ public class Cuenta {
 		}
 		else {
 			this.setSaldo(getSaldo()-i);
+			Movimiento movimiento=new Movimiento(i,TipoSigno.D, "Retirar");
+			this.mMovimientos.add(movimiento);
 			return true;
 		}
 	}
