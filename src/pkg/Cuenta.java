@@ -25,6 +25,8 @@ public class Cuenta {
 	public void ingresar(int i) {
 		// TODO Auto-generated method stub
 		this.setSaldo(this.getSaldo()+i);
+		Movimiento movimiento = new Movimiento(i, TipoSigno.H, "Ingreso");
+		this.mMovimientos.add(movimiento);
 	}
 	public boolean Retirar(int i) 
 	{
