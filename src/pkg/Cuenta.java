@@ -1,5 +1,6 @@
 package pkg;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cuenta {
@@ -7,11 +8,13 @@ public class Cuenta {
 	private double saldo;
 	private static final double saldomin=-500;
 	private double num;
-	 
+	private List<Movimiento> mMovimientos;
+
 	public Cuenta(double saldo, int numero) {
 		super();
 		this.saldo = saldo;
 		this.num=numero;
+		this.mMovimientos=new ArrayList<>();
 	}
 	public double getSaldo() {
 		return saldo;
