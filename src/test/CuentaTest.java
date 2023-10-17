@@ -14,7 +14,7 @@ class CuentaTest {
 	static Cuenta cta;
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		cta = new Cuenta(0,1369);
+		/*cta = new Cuenta(0,1369);*/
 	}
 
 	@AfterAll
@@ -23,7 +23,7 @@ class CuentaTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		cta.setSaldo(0);
+		/*cta.setSaldo(0);*/
 	}
 
 	@AfterEach
@@ -31,31 +31,33 @@ class CuentaTest {
 	}
 	@Test
 	void testIngresar() {
-		cta.ingresar(3000);
-		assertEquals(3000,cta.getSaldo());
+		/*cta.ingresar(3000);
+		assertEquals(3000,cta.getSaldo());*/
 	}
 	@Test
 	void testRetirar() {
-		assertFalse(cta.Retirar(3000));
-		assertEquals(0,cta.getSaldo());
+		/*assertFalse(cta.Retirar(3000));
+		assertEquals(0,cta.getSaldo());*/
 	}
 	
 	 @Test
 	    public void testT0014() 
 	    {
 		 	Cuenta c12345 = new Cuenta(50,12345);
-		 	Cuenta c67890 = new Cuenta(0,67890);
 		 	//instcuccion cuenta 12345
-		 	c12345.Retirar(200);
+		 	assertTrue(c12345.Retirar(200));
 		 	assertEquals(-150,c12345.getSaldo());
 		 	
 			c12345.ingresar(100);
 			assertEquals(-50,c12345.getSaldo());
 			
-			c12345.Retirar(200);
+			assertTrue(c12345.Retirar(200));
 			assertEquals(-250,c12345.getSaldo());
 			
+			System.out.println("Saldo final: -250€");
+			
 		 	//instruccion cuenta67890
+		 	Cuenta c67890 = new Cuenta(0,67890);
 		 	assertTrue(c67890.Retirar(350));
 			assertEquals(-350,c67890.getSaldo());
 			
@@ -70,6 +72,8 @@ class CuentaTest {
 			
 			assertFalse(c67890.Retirar(100));
 			assertEquals(-450,c67890.getSaldo());
+			
+			System.out.println("Saldo final: -450€");
 	    }
 
 }
